@@ -1,4 +1,4 @@
-'Made with the power of the internet by NotAllur (https://github.com/NotAllur).
+'Made with the power of the internet by NotAllur (https://github.com/NotAllur/VBA-Export-worksheets-to-PDF).
 Sub Export_to_PDF()
     Dim boxTitle As String
     boxTitle = "Export to PDF"
