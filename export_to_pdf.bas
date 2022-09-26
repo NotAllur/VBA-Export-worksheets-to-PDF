@@ -6,7 +6,7 @@ Sub Export_to_PDF()
         currentPath = ThisWorkbook.Path
     Dim ws As Worksheet
     Dim desired As Integer
-        desired = MsgBox("Is this the desired export directory? The current directory path is" & currentPath & ".", vbYesNo + vbQuestion, boxTitle)
+    desired = MsgBox("Is this the desired export directory? The current directory path is " & currentPath & ".", vbYesNo + vbQuestion, boxTitle)
             If desired = vbNo Then
                 Dim manInput As Integer
                 manInput = MsgBox("Would you like to manually enter the path to the desired target directory?", vbYesNo + vbQuestion, boxTitle)
