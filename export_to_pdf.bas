@@ -5,6 +5,8 @@ Sub Export_to_PDF()
     Dim currentPath As String
         currentPath = ThisWorkbook.Path
     Dim ws As Worksheet
+    Dim success As String
+        success = "Success! All worksheets have been exported"
     Dim desired As Integer
     desired = MsgBox("Is this the desired export directory? The current directory path is " & currentPath & ".", vbYesNo + vbQuestion, boxTitle)
             If desired = vbNo Then
@@ -21,7 +23,7 @@ Sub Export_to_PDF()
                                 Quality:=xlQualityStandard, IncludeDocProperties:=False, _
                                 IgnorePrintAreas:=True, OpenAfterPublish:=False
                             Next ws
-                                MsgBox "Success! All worksheets have been exported to " & srcPath & ".", vbInformation, boxTitle
+                                MsgBox success & " to " & srcPath & ".", vbInformation, boxTitle
                             Exit Sub
                     Else
                         MsgBox "Export aborted. Transfer your Excel file to the desired export folder or enter the desired directory path manually.", vbCritical, boxTitle
@@ -37,6 +39,6 @@ Sub Export_to_PDF()
         Quality:=xlQualityStandard, IncludeDocProperties:=False, _
         IgnorePrintAreas:=True, OpenAfterPublish:=False
     Next ws
-        MsgBox "Success! All worksheets have been exported.", vbInformation, boxTitle
+    MsgBox success & ".", vbInformation, boxTitle
 End Sub
 
